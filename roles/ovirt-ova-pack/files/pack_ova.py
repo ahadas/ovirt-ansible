@@ -23,7 +23,7 @@ def padToBlockSize(file, size):
 
 ova_path = sys.argv[1]
 print "opening for write: %s" % ova_path
-ova_fd = os.open(ova_path, os.O_WRONLY | os.O_CREAT)
+ova_fd = os.open(ova_path, os.O_WRONLY)
 ova_file = io.FileIO(ova_fd, "w")
 
 ovf = sys.argv[2]

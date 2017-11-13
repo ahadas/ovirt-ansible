@@ -1,3 +1,0 @@
----
-  - name: create packing script
-    script: pack_ova.py "{{ path }}""{{ tar }}" "{{ ovf }}" "{{ disks }}"
