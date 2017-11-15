@@ -1,20 +1,22 @@
 #!/usr/bin/python
 
-import os
 import io
-import tarfile
+import os
 import sys
+import tarfile
 import time
 
 BLOCKSIZE = 512
 NUL = "\0"
 buf = bytearray(4096)
 
+
 def createTarInfo(name, size):
     info = tarfile.TarInfo(name)
     info.size = size
     info.mtime = time.time()
     return info
+
 
 def padToBlockSize(file, size):
     remainder = size % BLOCKSIZE
@@ -56,4 +58,3 @@ ova_file.write(empty_block)
 ova_file.write(empty_block)
 
 ova_file.close()
-
