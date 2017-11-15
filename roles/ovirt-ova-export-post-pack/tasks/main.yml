@@ -1,5 +1,5 @@
 ---
-    - name: Rename the OVA file
-      command: mv "{{ ova_file.dest }}" "{{ target_directory }}/{{ ova_name }}"
-      when: packing_result is defined and ova_file.dest is defined
+- name: Rename the OVA file
+  command: mv "{{ ova_file.dest }}" "{{ target_directory }}/{{ ova_name }}"
+  when: packing_result is defined and ova_file.dest is defined
 

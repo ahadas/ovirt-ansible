@@ -1,5 +1,5 @@
 ---
-  - name: Run packing script
-    script: pack_ova.py "{{ ova_file.dest }}" "{{ ovf }}" "{{ disks }}"
-    register: packing_result
-    when: ova_file is defined and ova_file.dest is defined
+- name: Run packing script
+  script: pack_ova.py "{{ ova_file.dest }}" "{{ ovf }}" "{{ disks }}"
+  register: packing_result
+  when: ova_file is defined and ova_file.dest is defined
